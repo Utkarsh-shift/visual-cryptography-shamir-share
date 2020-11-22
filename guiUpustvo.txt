@@ -1,0 +1,27 @@
+Objašnjenje za upotrebu gui-ja:
+
+1. Generiši senke 1 generiše senke tako što kao koeficijente polinoma uzima 
+susedne piksele. Kao x-evi za generisanje senki se koriste indeksi. Na grafiku ce
+biti prikazane generisane senke, ali će takođe biti ispisane u isti folder gde je
+originalna slika. 
+
+2. Generiši senke 2 generiše senke tako što kao koeficijente polinoma uzima 
+piksele koji nisu susedni, nego vertikalno deli sliku na k delova, pa uzima odgovarajuci
+piksel iz svakog dela. Kao x-evi za generisanje senki se koriste indeksi senki.
+
+3. Dodaj senke 1 služi da bi se senke koje su generisane u nekom ranije korištenju, primenom
+metode 1 mogle ponovo očitati. Istovremeno se selektuju sve i pojaviće se na grafiku. 
+
+4. Dodaj senke 2 služi da bi se senke koje su generisane u nekom ranije korištenju, primenom
+metode 2 mogle ponovo očitati.
+
+Ako su senke tek generisane i prikazane na grafiku, nije potrebno koristiti dodaj senke pre rekonstrukcije. 
+To služi isključivo za stare senke.
+
+5. Rekonstrukcija 1 rekonstruiše sliku od senki generisanih metodom 1. Polje indeksi označava
+koje senke da se koriste (bira se od senki koje su u tom trenutku prikazane na grafiku 1). Za
+njih se unose odgovarajuće x vrednosti (za slučaj da je korišteno dodaj senke, a ne tek generisane
+senke, pa se ne moraju poklopiti indeksi i x-evi).
+Rekonstrukcija prikaže sliku u odgovarajućem grafiku i sačuva sliku u folderu gde se nalaze senke.
+
+6. Rekonstrukcija 2 rekonstruiše sliku od senki generisanih metodom 2. 
